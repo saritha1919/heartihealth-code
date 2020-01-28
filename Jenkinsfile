@@ -22,9 +22,9 @@ pipeline {
                    stage('Deployment'){
 		       steps{
                            script{
-				   dir('discoveri-heartihealth-webapp\target')
+				   dir('discoveri-heartihealth-webapp\\target')
 				   {
-					powershell javaw -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar  
+					   bat label: '', script: 'javaw -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar'
 				   }
                              //bat "RunService.bat"
 		           }
