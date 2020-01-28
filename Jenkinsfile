@@ -4,7 +4,7 @@ pipeline {
 	    
                  stage('Source') {
                     steps {
-                       checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url:'https://komalsahu@dev.azure.com/komalsahu/SkillAssure%20Discoveri/_git/HeartiHealth-Services']]])
+                       checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url:'https://github.com/saritha1919/heartihealth-code.git']]])
 	            }        
                  }
                   stage('Build') {
