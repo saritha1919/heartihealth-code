@@ -22,10 +22,7 @@ pipeline {
                    stage('Deployment'){
 		       steps{
                            script{
-                              dir('discoveri-heartihealth-webapp\\target')
-                              {
-                                bat label: '', script: 'jave -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT'
-			      }
+                             bat "RunService.bat"
 		           }
                     }
 		}
