@@ -5,7 +5,7 @@ pipeline {
                  stage('Source') {
                     steps {
                        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url:'https://komalsahu@dev.azure.com/komalsahu/SkillAssure%20Discoveri/_git/HeartiHealth-Services']]])
-			              }        
+	            }        
                  }
                   stage('Build') {
                     tools{
@@ -16,7 +16,7 @@ pipeline {
                               script{
                                 bat label: '', script: 'mvn install'
                                 bat label: '', script: 'mvn spring-boot:run -pl discoveri-heartihealth-webapp'
-                              }
+                               }
                             }
                   }
                    stage('Deployment'){
@@ -27,6 +27,7 @@ pipeline {
                                 bat label: '', script: 'jave -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT'
 			      }
 		           }
-                  }
+                    }
+		}
 	}
 }
