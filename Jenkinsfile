@@ -24,7 +24,7 @@ pipeline {
                            script{
 				   dir('discoveri-heartihealth-webapp\\target')
 				   {
-					   bat label: '', script: 'javaw -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar'
+					   bat  'javaw -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar'
 				   }
                              //bat "RunService.bat"
 		           }
