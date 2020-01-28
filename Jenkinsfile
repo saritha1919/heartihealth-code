@@ -22,13 +22,15 @@ pipeline {
                    stage('Deployment'){
 		       steps{
                            script{
-				   //dir('discoveri-heartihealth-webapp\\target')
-				   //{
+				   dir('discoveri-heartihealth-webapp\\target')
+				   {
 					   set BUILD_ID=dontKillMe
-                                           powershell -Command "Start-Process 'RunService.bat'"
-					   //bat  'javaw -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar'
+					 
+                                          // powershell -Command "Start-Process 'RunService.bat'"
+					   bat  'javaw -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar'
+					     BUILD ID URL/stop
 					   echo 'After deployment'
-				   //}
+				   }
                              //bat "RunService.bat"
 		           }
                     }
