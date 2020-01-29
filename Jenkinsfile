@@ -7,7 +7,7 @@ pipeline {
                        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url:'https://github.com/saritha1919/heartihealth-code.git']]])
 	            }        
                  }
-                  stage('Build') {
+                  stage('ServiceBuild') {
                     tools{
                       jdk 'jdk8'
                       maven 'Maven'
@@ -23,12 +23,12 @@ pipeline {
                    stage('Deployment'){
 		       steps{
                            script{
-				   dir('discoveri-heartihealth-webapp\\target')
-				   {
+				   //dir('discoveri-heartihealth-webapp\\target')
+				   //{
                                            bat label: '', script: 'WinSW.NET4.exe install'
 					   //bat  'javaw -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar &'
 					   echo 'After deployment'
-				   }
+				   //}
                              //bat "RunService.bat"
 		           }
                     }
