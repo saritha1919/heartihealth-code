@@ -31,7 +31,7 @@ pipeline {
 					   set BUILD_ID=dontKillMe
 					 
                                           // powershell -Command "Start-Process 'RunService.bat'"
-					   bat  'javaw -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar'
+					   bat  'javaw -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar &'
 					   echo 'After deployment'
 				   }
                              //bat "RunService.bat"
