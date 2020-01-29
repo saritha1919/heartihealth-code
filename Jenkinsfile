@@ -15,27 +15,13 @@ pipeline {
                             steps { 
                               script{
                                 bat label: '', script: 'mvn install'
-                               // bat label: '', script: 'mvn spring-boot:run -pl discoveri-heartihealth-webapp'
-				 bat label: '', script: 'mvn clean package'    
-				      dir('discoveri-heartihealth-webapp\\target'){
-                                        fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: "\\*.jar", targetLocation: "C:\\Program Files (x86)\\Jenkins\\workspace\\Hearti-Health-Services")])
-                                       }
-                               }
+				 bat label: '', script: 'mvn clean package'
                             }
                   }
                    stage('Deployment'){
 		       steps{
                            script{
-				   //dir('discoveri-heartihealth-webapp\\target')
-				   //{
-					   
-                                           //bat label: '', script: 'C:\\Windows\\System32\\runas.exe /user:PT-RND-001\\Saritha "WinSW.NET4.exe install"'
-					   //bat  'javaw -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar &'
-					//   echo 'After deployment'
-				   //}
-				 // bat "runas /savecred /user:ng1\\administrator RunService.bat"
                            bat "runservice.bat"
-				   echo "completed"
 		           }
                     }
 		}
