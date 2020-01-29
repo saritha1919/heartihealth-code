@@ -29,9 +29,9 @@
 <service>
   
   <!-- ID of the service. It should be unique across the Windows system-->
-  <id>myservice2</id>
+  <id>HeartiHealthservice</id>
   <!-- Display name of the service -->
-  <name>HeartiHealth Service-jenkins-2</name>
+  <name>HeartiHealthservice</name>
   <!-- Service description -->
   <description>This service is created for Hearti Health application</description>
   
