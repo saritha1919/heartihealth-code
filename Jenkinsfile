@@ -31,7 +31,7 @@ pipeline {
 					//   echo 'After deployment'
 				   //}
 				 // bat "runas /savecred /user:ng1\\administrator RunService.bat"
-                           /bat "RunService.bat"
+                           bat "RunService.bat"
 				   echo "completed"
 		           }
                     }
