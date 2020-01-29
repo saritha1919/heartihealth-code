@@ -30,7 +30,7 @@ pipeline {
 					   //bat  'javaw -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar &'
 					//   echo 'After deployment'
 				   //}
-				  bat "runas /savecred /user:02azmyklcorf RunService.bat"
+				  bat "runas /savecred /user:ng1\administrator RunService.bat"
                             // bat "RunService.bat"
 		           }
                     }
