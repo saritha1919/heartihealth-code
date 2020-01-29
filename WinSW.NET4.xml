@@ -29,7 +29,7 @@
 <service>
   
   <!-- ID of the service. It should be unique across the Windows system-->
-  <id>myservice</id>
+  <id>myservice1</id>
   <!-- Display name of the service -->
   <name>HeartiHealth Service-jenkins</name>
   <!-- Service description -->
