@@ -21,7 +21,7 @@ pipeline {
 		  }
 		     stage('Archiving Artifacts') { 
                          steps{ 
-                             archiveArtifacts 'target/*.jar' 
+                             archiveArtifacts 'discoveri-heartihealth-webapp/target/*.jar' 
                          } 
                  } 
                    stage('CreateService'){
