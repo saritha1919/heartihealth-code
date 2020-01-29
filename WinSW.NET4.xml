@@ -37,7 +37,7 @@
   
   <!-- Path to the executable, which should be started -->
   <executable>java</executable>
-  <arguments> -jar %BASE%\discoveri-heartihealth-webapp\target\discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar</arguments>
+  <arguments> -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar</arguments>
   
  
 
