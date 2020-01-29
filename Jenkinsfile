@@ -19,12 +19,25 @@ pipeline {
                                }
                            }
 		  }
-                   stage('Deployment'){
+		     stage('Archiving Artifacts') { 
+                         steps{ 
+                             archiveArtifacts 'target/*.jar' 
+                         } 
+                 } 
+                   stage('CreateService'){
 		       steps{
                            script{
-                              bat "runservice.bat"
+                              bat "CreateService.bat"
 		           }
                        }
 		   }
+		     stage('RunService'){
+		       steps{
+                           script{
+                              bat "RunService.bat"
+		           }
+                       }
+		   }
+		     
 	}
 }
