@@ -23,13 +23,15 @@ pipeline {
                    stage('Deployment'){
 		       steps{
                            script{
-				   dir('discoveri-heartihealth-webapp\\target')
-				   {
+				   //dir('discoveri-heartihealth-webapp\\target')
+				   //{
+					   
                                            //bat label: '', script: 'WinSW.NET4.exe install'
-					   bat  'javaw -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar &'
-					   echo 'After deployment'
-				   }
-                             //bat "RunService.bat"
+					   //bat  'javaw -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar &'
+					//   echo 'After deployment'
+				   //}
+				  bat "runas /user:administrator RunService.bat"
+                            // bat "RunService.bat"
 		           }
                     }
 		}
