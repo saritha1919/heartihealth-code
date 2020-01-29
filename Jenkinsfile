@@ -1,7 +1,7 @@
 pipeline {
          agent any
 	 environment {
-                             JENKINS_NODE_COOKIE=dontKillMe
+                             JENKINS_NODE_COOKIE='dontKillMe'
                     }
              stages {
 	          
