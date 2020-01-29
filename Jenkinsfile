@@ -16,6 +16,7 @@ pipeline {
                               script{
                                 bat label: '', script: 'mvn install'
                                // bat label: '', script: 'mvn spring-boot:run -pl discoveri-heartihealth-webapp'
+				 bat label: '', script: 'mvn clean package'     
                                }
                             }
                   }
