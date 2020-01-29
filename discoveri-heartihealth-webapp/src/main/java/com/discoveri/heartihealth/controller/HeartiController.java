@@ -26,7 +26,7 @@ public class HeartiController {
 	private HeartInfoService heartInfoService;
 
 	@RequestMapping(value = "/weeklyReport", method = RequestMethod.GET)
-	public ResponseEntity<List<IntervalPrediction>> weeklyReport() throws SQLException {
+	public ResponseEntity<List<IntervalPrediction>> weeklyReport1() throws SQLException {
 		try {
 			List<IntervalPrediction> weeklypredication = heartInfoService.weeklyReport();
 			if (weeklypredication == null) {
