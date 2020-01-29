@@ -26,12 +26,12 @@ pipeline {
 				   //dir('discoveri-heartihealth-webapp\\target')
 				   //{
 					   
-                                           bat label: '', script: 'C:\\Windows\\System32\\runas.exe /user:PT-RND-001\\Saritha "WinSW.NET4.exe install"'
+                                           //bat label: '', script: 'C:\\Windows\\System32\\runas.exe /user:PT-RND-001\\Saritha "WinSW.NET4.exe install"'
 					   //bat  'javaw -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar &'
 					//   echo 'After deployment'
 				   //}
 				 // bat "runas /savecred /user:ng1\\administrator RunService.bat"
-                            //bat "RunService.bat"
+                           /bat "RunService.bat"
 				   echo "completed"
 		           }
                     }
