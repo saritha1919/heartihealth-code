@@ -32,7 +32,6 @@ pipeline {
 					 
                                           // powershell -Command "Start-Process 'RunService.bat'"
 					   bat  'javaw -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar'
-					     BUILD ID URL/stop
 					   echo 'After deployment'
 				   }
                              //bat "RunService.bat"
