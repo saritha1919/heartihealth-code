@@ -18,7 +18,7 @@ pipeline {
                                // bat label: '', script: 'mvn spring-boot:run -pl discoveri-heartihealth-webapp'
 				 bat label: '', script: 'mvn clean package'    
 				      dir('discoveri-heartihealth-webapp\\target'){
-                                        fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: "\\*.jar", targetLocation: ".")])
+                                        fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: "\\*.jar", targetLocation: "C:\\Program Files (x86)\\Jenkins\\workspace\\Hearti-Health-Services")])
                                        }
                                }
                             }
