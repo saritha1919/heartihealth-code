@@ -15,7 +15,7 @@ pipeline {
                             steps { 
                               script{
                                 bat label: '', script: 'mvn install'
-                                bat label: '', script: 'mvn spring-boot:run -pl discoveri-heartihealth-webapp'
+                               // bat label: '', script: 'mvn spring-boot:run -pl discoveri-heartihealth-webapp'
 				 Print(env.JENKINS_NODE_COOKIE)
                                }
                             }
