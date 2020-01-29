@@ -16,14 +16,15 @@ pipeline {
                               script{
                                 bat label: '', script: 'mvn install'
 				 bat label: '', script: 'mvn clean package'
-                            }
-                  }
+                               }
+                           }
+		  }
                    stage('Deployment'){
 		       steps{
                            script{
-                           bat "runservice.bat"
+                              bat "runservice.bat"
 		           }
-                    }
-		}
+                       }
+		   }
 	}
 }
