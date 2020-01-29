@@ -26,7 +26,7 @@ pipeline {
 				   //dir('discoveri-heartihealth-webapp\\target')
 				   //{
 					   
-                                           bat label: '', script: 'C:\\Windows\\System32\runas.exe /user:PT-RND-001\Saritha WinSW.NET4.exe install < password@123'
+                                           bat label: '', script: 'C:\\Windows\\System32\runas.exe /user:PT-RND-001\Saritha "WinSW.NET4.exe install" < password@123'
 					   //bat  'javaw -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar &'
 					//   echo 'After deployment'
 				   //}
