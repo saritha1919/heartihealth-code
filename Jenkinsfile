@@ -1,7 +1,10 @@
 pipeline {
          agent any
+	 environment {
+                             JENKINS_NODE_COOKIE=dontKillMe
+                    }
              stages {
-	    
+	          
                  stage('Source') {
                     steps {
                        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url:'https://github.com/saritha1919/heartihealth-code.git']]])
@@ -16,6 +19,7 @@ pipeline {
                               script{
                                 bat label: '', script: 'mvn install'
                                 bat label: '', script: 'mvn spring-boot:run -pl discoveri-heartihealth-webapp'
+				 Print(env.JENKINS_NODE_COOKIE)
                                }
                             }
                   }
