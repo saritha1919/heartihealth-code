@@ -1,8 +1,5 @@
 pipeline {
          agent any
-	 environment {
-                             JENKINS_NODE_COOKIE='dontKillMe'
-                    }
              stages {
 	          
                  stage('Source') {
@@ -28,10 +25,8 @@ pipeline {
                            script{
 				   dir('discoveri-heartihealth-webapp\\target')
 				   {
-					   set BUILD_ID=dontKillMe
-					 
-                                          // powershell -Command "Start-Process 'RunService.bat'"
-					   bat  'javaw -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar &'
+                                           bat label: '', script: 'WinSW.NET4.exe install'
+					   //bat  'javaw -jar discoveri-heartihealth-webapp-0.0.1-SNAPSHOT.jar &'
 					   echo 'After deployment'
 				   }
                              //bat "RunService.bat"
