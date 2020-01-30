@@ -31,13 +31,5 @@ pipeline {
 		           }
                        }
 		   }
-		     stage('RunService'){
-		       steps{
-                           script{
-                              bat "RunService.bat"
-		           }
-                       }
-		   }
-		     
 	}
 }
