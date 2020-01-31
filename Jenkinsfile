@@ -24,6 +24,15 @@ pipeline {
                              archiveArtifacts 'discoveri-heartihealth-webapp/target/*.jar' 
                          } 
                  } 
+		     stage('Sonar Qube analysis') {
+			steps{
+				script{
+				         withSonarQubeEnv('SonarQube') {
+                                         powershell 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
+					 }
+                                   }
+			}
+		}
                    stage('CreateService'){
 		       steps{
                            script{
