@@ -24,7 +24,7 @@ pipeline {
                              archiveArtifacts 'discoveri-heartihealth-webapp/target/*.jar' 
                          } 
                  } 
-		     stage('Sonar Qube analysis') {
+		     /*stage('Sonar Qube analysis') {
 			steps{
 				script{
 				         withSonarQubeEnv('SonarQube') {
@@ -32,7 +32,7 @@ pipeline {
 					 }
                                    }
 			}
-		}
+		}*/
                    stage('CreateService'){
 		       steps{
                            script{
