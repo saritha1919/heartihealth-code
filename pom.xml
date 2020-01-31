@@ -28,8 +28,6 @@
                <sonar.organization>saritha1919</sonar.organization>
               <sonar.host.url>https://sonarcloud.io</sonar.host.url>
                 <sonar.login>9c0596360ede31ae3303d637d359e83a68b2c45b</sonar.login>
-          </properties>
-	<properties>
 		<java.version>1.8</java.version>
 	</properties>
 
