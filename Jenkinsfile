@@ -28,7 +28,9 @@ pipeline {
 			steps{
 				script{
 				         withSonarQubeEnv('SonarQube') {
-						 bat label: '', script: 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
+						 bat label: '', script: 'mvn clean install'
+				                 bat label: '', script: 'mvn sonar:sonar'
+					  //bat label: '', script: 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
                                          //powershell 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
 					 }
                                    }
